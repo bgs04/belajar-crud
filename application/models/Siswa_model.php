@@ -7,12 +7,12 @@ class Siswa_model extends CI_Model
           return $this->db->get('siswa')->result_array();
      }
      public function tambahDataSiswa()
-     {
+     {  
           $data = [
-               "nama" => $this->input->post('nama', true),
-               "nis" => $this->input->post('nis', true),
-               "kelas" => $this->input->post('kelas', true),
-               "tanggal-lahir" => $this->input->post('tanggal-lahir', true),
+               "nama"    => $this->input->post('nama', true),
+               "nis"     => $this->input->post('nis', true),
+               "kelas"   => $this->input->post('kelas', true),
+     "tanggal-lahir"     => $this->input->post('tanggal-lahir', true),
                "jurusan" => $this->input->post('jurusan', true),
           ];
           $this->db->insert('siswa', $data);
@@ -25,7 +25,7 @@ class Siswa_model extends CI_Model
      }
      public function getSiswaById($id)
      {
-          $this->db->get_where('siswa', ['id' => $id])->row_array();
+         return $this->db->get_where('siswa', ['id' => $id])->row_array();
      }
 
      public function ubahDataSiswa()
