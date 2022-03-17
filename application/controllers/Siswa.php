@@ -32,18 +32,21 @@ class Siswa extends CI_Controller
                $this->load->view('templates/footer');
           } else {
                $this->Siswa_model->tambahDataSiswa();
+               $this->session->set_flashdata('flash','Ditambah');
                redirect('siswa');
           }
      }
      public function hapus($id)
      {
           $this->Siswa_model->hapusDataSiswa($id);
+          $this->session->set_flashdata('flash','Dihapus');
           redirect('siswa');
      }
      public function ubah($id)
      {
           $data['judul'] = 'Form Ubah Data Siswa';
           $data['siswa'] = $this->Siswa_model->getSiswaById($id);
+          $data['jurusan']=['Rekayasa Perangkat Lunak','Teknik Komputer Dan Jaringan','Teknik Mesin','Multimedia','Arsitek'];
           $this->form_validation->set_rules('nama', 'Username', 'required');
           $this->form_validation->set_rules('nis', 'Nis', 'required|numeric');
           $this->form_validation->set_rules('kelas', 'Kelas', 'required');
@@ -54,6 +57,7 @@ class Siswa extends CI_Controller
                $this->load->view('templates/footer');
           } else {
                $this->Siswa_model->ubahDataSiswa();
+          $this->session->set_flashdata('flash','Diubah');
                redirect('siswa');
           }
      }
