@@ -14,17 +14,17 @@
                               </div>
                               <div class="form-group">
                                    <label for="nis">Nis </label>
-                                   <input type="text" name="nis" class="form-control" id="nis">
+                                   <input type="text" name="nis" class="form-control" id="nis" <?= $siswa['nis']; ?>>
                                    <small class="form-text text-danger"><?= form_error('nis'); ?></small>
                               </div>
                               <div class="form-group">
                                    <label for="kelas">Kelas </label>
-                                   <input type="text" name="kelas" class="form-control" id="kelas">
+                                   <input type="text" name="kelas" class="form-control" id="kelas" <?= $siswa['kelas']; ?>>
                                    <small class="form-text text-danger"><?= form_error('kelas'); ?></small>
                               </div>
                               <div class="form-group">
                                    <label for="tanggal-lahir">Tanggal_Lahir </label>
-                                   <input type="date" name="tanggal-lahir" class="form-control" id="tanggal-lahir">
+                                   <input type="date" name="tanggal-lahir" class="form-control" id="tanggal-lahir" <?= $siswa['tanggal-lahir']; ?>>
                               </div>
                               <div class="form-group">
                                    <label for="jurusan"> Jurusan</label>
