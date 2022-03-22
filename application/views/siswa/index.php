@@ -1,7 +1,8 @@
 <div class="container">
 
+     <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
      <?php if($this->session->flashdata('flash')): ?>
-     <div class="row mt-3">
+     <!-- <div class="row mt-3">
           <div class="col-md-6">
                <div class="alert alert-success alert-dismissible fade show" role="alert">
                     Data siswa <strong>berhasil</strong><?= $this->session->flashdata('flash'); ?>
@@ -10,7 +11,7 @@
                     </button>
                </div>
           </div>
-     </div>
+     </div> -->
           <?php endif; ?>
 
      <div class="row mt-3">
@@ -43,7 +44,7 @@
                                    <td><?= $swa['kelas']; ?></td>
                                    <td><?= $swa['jurusan']; ?></td>
                                    <td><?= $swa['tanggal-lahir']; ?></td>
-                                   <td><a href="<?= base_url(); ?>siswa/hapus/<?= $swa['id']; ?>" class="badge badge-danger " onclick="return confirm('yakin?');">Hapus</a> |
+                                   <td><a href="<?= base_url(); ?>siswa/hapus/<?= $swa['id']; ?>" class="badge badge-danger tombol-hapus">Hapus</a> |
                                         <a href="<?= base_url(); ?>siswa/ubah/<?= $swa['id']; ?>" class="badge badge-success ">Ubah</a>
                                    </td>
                               </tr>
