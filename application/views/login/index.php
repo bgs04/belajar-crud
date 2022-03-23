@@ -26,12 +26,15 @@
 					<span><i class="fab fa-google-plus-square"></i></span>
 					<span><i class="fab fa-twitter-square"></i></span>
 				</div>
-                    <?php 
-                    $info = $this->session->flashdata('info');
+                    
+				<small class="form-text text-danger">
+					<?php 
+			     $info = $this->session->flashdata('info');
                     if (!empty($info)){
                          echo $info;
                     }
                     ?>
+				</small>
 			</div>
 			<div class="card-body">
 				<form action="<?= site_url('login/ceklogin') ?>" method="post" name="login_form" >
