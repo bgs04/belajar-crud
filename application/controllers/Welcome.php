@@ -6,6 +6,8 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
+		$this->load->model('Siswa_model');
+          $this->Siswa_model->keamanan();
 		$this->load->view('welcome_message');
 	}
 

@@ -5,8 +5,7 @@ class Home extends CI_Controller
 {
      public function index($nama = '')
      {
-          $this->load->model('Siswa_model');
-          $this->Siswa_model->keamanan();
+        
 
           $data['judul'] = "Halaman Home";
           $data['nama'] = $nama;

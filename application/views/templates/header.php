@@ -19,7 +19,7 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                         <a class="nav-link active" href="<?= base_url(); ?>">Home <span class="sr-only">(current)</span></a>
+                         <a class="nav-link active" href="<?= base_url(); ?>home">Home <span class="sr-only">(current)</span></a>
                          <a class="nav-link" href="<?= base_url(); ?>siswa">Siswa</a>
                          <a class="nav-link" href="<?= site_url('login/logout') ?>">Logout</a>
                     </div>
