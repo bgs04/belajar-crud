@@ -7,8 +7,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
      <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-     <title><?= $judul; ?></title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> 
 </head>
 
 <body>
@@ -22,7 +21,7 @@
                     <div class="navbar-nav">
                          <a class="nav-link active" href="<?= base_url(); ?>">Home <span class="sr-only">(current)</span></a>
                          <a class="nav-link" href="<?= base_url(); ?>siswa">Siswa</a>
-                         <a class="nav-link" href="#">About</a>
+                         <a class="nav-link" href="<?= site_url('login/logout') ?>">Logout</a>
                     </div>
                </div>
           </div>

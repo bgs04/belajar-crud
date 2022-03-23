@@ -40,4 +40,28 @@ class Siswa_model extends CI_Model
           $this->db->where('id', $this->input->post('id'));
           $this->db->update('siswa', $data);
      }
+
+     public function ambilogin($username,$password){
+          $this->db->where('username',$username);
+          $this->db->where('password',$password);
+          $query =$this->db->get('login');
+          if($query->num_rows()>0){
+               foreach ($query->result() as $row){
+                    $sess =array('username'=> $row -> username,'password'=> $row->password);
+               }
+               $this->session->get_userdata($sess);
+               redirect('home');
+          }else{
+               $this->session->set_flashdata('info','MAAF Username dan Pasword Anda Salah!,Mohon di coba kembali');
+               redirect('login');
+          }
+     }
+
+     public function keamanan(){
+          $username = $this->session->sess_destroy('username');
+          if(!empty($username)){
+               $this->session->sess_destroy();
+               redirect('login');
+          }
+     }
 }
